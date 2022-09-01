@@ -17,27 +17,6 @@ app.get('/health', function (req, res) {
     res.end( "Ok." );
     });
 
-/*
-app.get('/', function (req, res) {
-    var s="<h1>Instancia '"+SERVICE_ID+"' del servicio '"+SERVICE_NAME+"'</h1>";
-    s+="<h2>Listado de servicios</h2>";
-
-    console.log(s);
-
-    consul.agent.service.list(function(err, result) {
-      if (err) {
-	      console.log('Service List Error');
-	      throw err;}
-
-      console.log('Antes de');
-      res.end( s+JSON.stringify( result ) );
-      console.log(result);
-
-      });
-    });
- 
-*/
-
 app.get('/', (req, res) => {
   console.log('GET /', Date.now());
   res.json({
