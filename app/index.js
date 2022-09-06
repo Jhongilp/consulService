@@ -1,14 +1,14 @@
 const Consul = require('consul');
 const express = require('express');
 
-const SERVICE_NAME='microservicio101';
+const SERVICE_NAME='mymicroservice';
 const SERVICE_ID='m'+process.argv[2];
 const SCHEME='http';
 const HOST='192.168.100.2';
 const PORT=process.argv[2]*1;
 const PID = process.pid;
 
-/* Inicializamos server */
+/* Inicializacion del server */
 const app = express();
 const consul = new Consul();
 
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, function () {
-    console.log('Sistema armado en el puerto '+SCHEME+'://'+HOST+':'+PORT+'!');
+    console.log('Servicio iniciado en:'+SCHEME+'://'+HOST+':'+PORT+'!');
     });
 
 /* Registro del servicio */
