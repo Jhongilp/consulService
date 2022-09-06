@@ -4,7 +4,7 @@ const express = require('express');
 const SERVICE_NAME='microservicio101';
 const SERVICE_ID='m'+process.argv[2];
 const SCHEME='http';
-const HOST='192.168.100.3';
+const HOST='192.168.100.2';
 const PORT=process.argv[2]*1;
 const PID = process.pid;
 
@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
   res.json({
     data: Math.floor(Math.random() * 89999999 + 10000000),
     data_pid: PID,
-    data_service: SERVICE_ID
+    data_service: SERVICE_ID,
+    data_host: HOST
   });
 });
 
