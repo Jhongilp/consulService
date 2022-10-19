@@ -1,7 +1,7 @@
 const Consul = require('consul');
 const express = require('express');
 
-const SERVICE_NAME='mymicroservice';
+const SERVICE_NAME='web';
 const SERVICE_ID='m'+process.argv[2];
 const SCHEME='http';
 const HOST=process.env.VM_HOST;
